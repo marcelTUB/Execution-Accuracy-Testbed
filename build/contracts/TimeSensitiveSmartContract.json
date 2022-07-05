@@ -1,0 +1,4016 @@
+{
+  "contractName": "TimeSensitiveSmartContract",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "duration",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "constraintIntervalDuration",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "initSmartContractState",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "transactionId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getTransaction",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "startTime",
+          "type": "uint256"
+        }
+      ],
+      "name": "setConstraintIntervalStartTime",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "duration",
+          "type": "uint256"
+        }
+      ],
+      "name": "setConstraintIntervalDuration",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "transactionId",
+          "type": "uint256"
+        }
+      ],
+      "name": "constraintFunction",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"duration\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"transactionId\",\"type\":\"uint256\"}],\"name\":\"constraintFunction\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"constraintIntervalDuration\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"transactionId\",\"type\":\"uint256\"}],\"name\":\"getTransaction\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"initSmartContractState\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"duration\",\"type\":\"uint256\"}],\"name\":\"setConstraintIntervalDuration\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"startTime\",\"type\":\"uint256\"}],\"name\":\"setConstraintIntervalStartTime\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/TimeSensitiveSmartContract.sol\":\"TimeSensitiveSmartContract\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/TimeSensitiveSmartContract.sol\":{\"keccak256\":\"0x7f6f705ba21e8b3657c95dec9f92860d7d2a733d75d3dcd0e4c0632521b7b94e\",\"urls\":[\"bzz-raw://bf0e20b8184e1c7a69845f733e22eeed398084173c37217960c245b6766eb05b\",\"dweb:/ipfs/QmU3D6HEbPzG7pEsUYTrGXUjd5qDRFwLGFYQ4zcHRte6hn\"]}},\"version\":1}",
+  "bytecode": "0x6080604052600060025534801561001557600080fd5b5060405161035b38038061035b8339818101604052602081101561003857600080fd5b810190808051906020019092919050505080600181905550506102fb806100606000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c806333ea3dc8146100675780633c43c5e3146100b057806387d34c1d146100ce578063c2a8508d146100fc578063d15b491714610106578063d90fd11f14610134575b600080fd5b6100936004803603602081101561007d57600080fd5b8101908080359060200190929190505050610162565b604051808381526020018281526020019250505060405180910390f35b6100b8610190565b6040518082815260200191505060405180910390f35b6100fa600480360360208110156100e457600080fd5b8101908080359060200190929190505050610196565b005b6101046101aa565b005b6101326004803603602081101561011c57600080fd5b81019080803590602001909291905050506101f8565b005b6101606004803603602081101561014a57600080fd5b81019080803590602001909291905050506102a2565b005b6000806000600360008581526020019081526020016000209050806000015481600101549250925050915091565b60015481565b80600154146101a757806001819055505b50565b60008090505b6002548110156101ed57600360008281526020019081526020016000206000808201600090556001820160009055505080806001019150506101b0565b600060028190555050565b6102006102ac565b600054421180156102175750600154600054014211155b1561022c576001816000018181525050610257565b7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8160000181815250505b42816020018181525050806003600084815260200190815260200160002060008201518160000155602082015181600101559050506002600081548092919060010191905055505050565b8060008190555050565b60405180604001604052806000815260200160008152509056fea265627a7a72315820626a4a4f457c615ea79866bb79e4210f37c25d2a369ea2cb8194f91c7f6a1bb264736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100625760003560e01c806333ea3dc8146100675780633c43c5e3146100b057806387d34c1d146100ce578063c2a8508d146100fc578063d15b491714610106578063d90fd11f14610134575b600080fd5b6100936004803603602081101561007d57600080fd5b8101908080359060200190929190505050610162565b604051808381526020018281526020019250505060405180910390f35b6100b8610190565b6040518082815260200191505060405180910390f35b6100fa600480360360208110156100e457600080fd5b8101908080359060200190929190505050610196565b005b6101046101aa565b005b6101326004803603602081101561011c57600080fd5b81019080803590602001909291905050506101f8565b005b6101606004803603602081101561014a57600080fd5b81019080803590602001909291905050506102a2565b005b6000806000600360008581526020019081526020016000209050806000015481600101549250925050915091565b60015481565b80600154146101a757806001819055505b50565b60008090505b6002548110156101ed57600360008281526020019081526020016000206000808201600090556001820160009055505080806001019150506101b0565b600060028190555050565b6102006102ac565b600054421180156102175750600154600054014211155b1561022c576001816000018181525050610257565b7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8160000181815250505b42816020018181525050806003600084815260200190815260200160002060008201518160000155602082015181600101559050506002600081548092919060010191905055505050565b8060008190555050565b60405180604001604052806000815260200160008152509056fea265627a7a72315820626a4a4f457c615ea79866bb79e4210f37c25d2a369ea2cb8194f91c7f6a1bb264736f6c63430005100032",
+  "sourceMap": "70:1714:1:-;;;227:1;200:28;;375:91;8:9:-1;5:2;;;30:1;27;20:12;5:2;375:91:1;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;375:91:1;;;;;;;;;;;;;;;;451:8;422:26;:37;;;;375:91;70:1714;;;;;;",
+  "deployedSourceMap": "70:1714:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;70:1714:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;670:258;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;670:258:1;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;153:41;;;:::i;:::-;;;;;;;;;;;;;;;;;;;1062:186;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1062:186:1;;;;;;;;;;;;;;;;;:::i;:::-;;472:192;;;:::i;:::-;;1254:528;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1254:528:1;;;;;;;;;;;;;;;;;:::i;:::-;;934:122;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;934:122:1;;;;;;;;;;;;;;;;;:::i;:::-;;670:258;762:6;770:7;793:31;827:12;:27;840:13;827:27;;;;;;;;;;;793:61;;872:11;:20;;;894:11;:26;;;864:57;;;;;670:258;;;:::o;153:41::-;;;;:::o;1062:186::-;1170:8;1140:26;;:38;1136:106;;1223:8;1194:26;:37;;;;1136:106;1062:186;:::o;472:192::-;523:9;551:1;547:5;;542:86;558:16;;554:1;:20;542:86;;;602:12;:15;615:1;602:15;;;;;;;;;;;;595:22;;;;;;;;;;;;;;576:3;;;;;;;542:86;;;656:1;637:16;:20;;;;472:192;:::o;1254:528::-;1322:30;;:::i;:::-;1397:27;;1379:15;:45;:148;;;;;1501:26;;1471:27;;:56;1440:15;:87;;1379:148;1362:281;;;1575:1;1552:11;:20;;:24;;;;;1362:281;;;1630:2;1607:11;:20;;:25;;;;;1362:281;1681:15;1652:11;:26;;:44;;;;;1736:11;1706:12;:27;1719:13;1706:27;;;;;;;;;;;:41;;;;;;;;;;;;;;;;;;;1757:16;;:18;;;;;;;;;;;;;1254:528;;:::o;934:122::-;1040:9;1010:27;:39;;;;934:122;:::o;70:1714::-;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "// SPDX-License-Identifier: GPL-3.0\npragma solidity >=0.4.16 <0.8.0;\n\ncontract TimeSensitiveSmartContract {\n    uint256 constraintIntervalStartTime;\n    uint256 public constraintIntervalDuration;\n    uint256 transactionCount = 0;\n\n    struct Transaction {\n        int256 accepted;\n        uint256 blockTimestamp;\n    }\n\n    mapping(uint256 => Transaction) transactions;\n\n    constructor(uint256 duration) public {\n        constraintIntervalDuration = duration;\n    }\n\n    function initSmartContractState() public {\n        uint256 i;\n        for (i = 0; i < transactionCount; i++) {\n            delete transactions[i];\n        }\n        transactionCount = 0;\n    }\n\n    function getTransaction(uint256 transactionId)\n        public\n        view\n        returns (int256, uint256)\n    {\n        Transaction storage transaction = transactions[transactionId];\n        return (transaction.accepted, transaction.blockTimestamp);\n    }\n\n    function setConstraintIntervalStartTime(uint256 startTime) public {\n        constraintIntervalStartTime = startTime;\n    }\n\n    function setConstraintIntervalDuration(uint256 duration) public {\n        if (constraintIntervalDuration != duration) {\n            constraintIntervalDuration = duration;\n        }\n    }\n\n    function constraintFunction(uint256 transactionId) public {\n        Transaction memory transaction;\n        if (\n            block.timestamp > constraintIntervalStartTime &&\n            block.timestamp <=\n            constraintIntervalStartTime + constraintIntervalDuration\n        ) {\n            transaction.accepted = 1;\n        } else {\n            transaction.accepted = -1;\n        }\n        transaction.blockTimestamp = block.timestamp;\n        transactions[transactionId] = transaction;\n        transactionCount++;\n    }\n}\n",
+  "sourcePath": "/home/marcel/Documents/Execution-Accuracy-Testbed/contracts/TimeSensitiveSmartContract.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/TimeSensitiveSmartContract.sol",
+    "exportedSymbols": {
+      "TimeSensitiveSmartContract": [
+        188
+      ]
+    },
+    "id": 189,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 34,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".16",
+          "<",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "36:32:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 188,
+        "linearizedBaseContracts": [
+          188
+        ],
+        "name": "TimeSensitiveSmartContract",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 36,
+            "name": "constraintIntervalStartTime",
+            "nodeType": "VariableDeclaration",
+            "scope": 188,
+            "src": "112:35:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 35,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "112:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 38,
+            "name": "constraintIntervalDuration",
+            "nodeType": "VariableDeclaration",
+            "scope": 188,
+            "src": "153:41:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 37,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "153:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 41,
+            "name": "transactionCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 188,
+            "src": "200:28:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 39,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "200:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 40,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "227:1:1",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "TimeSensitiveSmartContract.Transaction",
+            "id": 46,
+            "members": [
+              {
+                "constant": false,
+                "id": 43,
+                "name": "accepted",
+                "nodeType": "VariableDeclaration",
+                "scope": 46,
+                "src": "264:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_int256",
+                  "typeString": "int256"
+                },
+                "typeName": {
+                  "id": 42,
+                  "name": "int256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "264:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 45,
+                "name": "blockTimestamp",
+                "nodeType": "VariableDeclaration",
+                "scope": 46,
+                "src": "289:22:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 44,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "289:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Transaction",
+            "nodeType": "StructDefinition",
+            "scope": 188,
+            "src": "235:83:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 50,
+            "name": "transactions",
+            "nodeType": "VariableDeclaration",
+            "scope": 188,
+            "src": "324:44:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Transaction_$46_storage_$",
+              "typeString": "mapping(uint256 => struct TimeSensitiveSmartContract.Transaction)"
+            },
+            "typeName": {
+              "id": 49,
+              "keyType": {
+                "id": 47,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "332:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "324:31:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Transaction_$46_storage_$",
+                "typeString": "mapping(uint256 => struct TimeSensitiveSmartContract.Transaction)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 48,
+                "name": "Transaction",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 46,
+                "src": "343:11:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Transaction_$46_storage_ptr",
+                  "typeString": "struct TimeSensitiveSmartContract.Transaction"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 59,
+              "nodeType": "Block",
+              "src": "412:54:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 57,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 55,
+                      "name": "constraintIntervalDuration",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38,
+                      "src": "422:26:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 56,
+                      "name": "duration",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 52,
+                      "src": "451:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "422:37:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 58,
+                  "nodeType": "ExpressionStatement",
+                  "src": "422:37:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 60,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 53,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52,
+                  "name": "duration",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 60,
+                  "src": "387:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "387:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "386:18:1"
+            },
+            "returnParameters": {
+              "id": 54,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "412:0:1"
+            },
+            "scope": 188,
+            "src": "375:91:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 87,
+              "nodeType": "Block",
+              "src": "513:151:1",
+              "statements": [
+                {
+                  "assignments": [
+                    64
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 64,
+                      "name": "i",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 87,
+                      "src": "523:9:1",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 63,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "523:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 65,
+                  "initialValue": null,
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "523:9:1"
+                },
+                {
+                  "body": {
+                    "id": 81,
+                    "nodeType": "Block",
+                    "src": "581:47:1",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 79,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "UnaryOperation",
+                          "operator": "delete",
+                          "prefix": true,
+                          "src": "595:22:1",
+                          "subExpression": {
+                            "argumentTypes": null,
+                            "baseExpression": {
+                              "argumentTypes": null,
+                              "id": 76,
+                              "name": "transactions",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 50,
+                              "src": "602:12:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Transaction_$46_storage_$",
+                                "typeString": "mapping(uint256 => struct TimeSensitiveSmartContract.Transaction storage ref)"
+                              }
+                            },
+                            "id": 78,
+                            "indexExpression": {
+                              "argumentTypes": null,
+                              "id": 77,
+                              "name": "i",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 64,
+                              "src": "615:1:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": true,
+                            "nodeType": "IndexAccess",
+                            "src": "602:15:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Transaction_$46_storage",
+                              "typeString": "struct TimeSensitiveSmartContract.Transaction storage ref"
+                            }
+                          },
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 80,
+                        "nodeType": "ExpressionStatement",
+                        "src": "595:22:1"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 72,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 70,
+                      "name": "i",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 64,
+                      "src": "554:1:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 71,
+                      "name": "transactionCount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 41,
+                      "src": "558:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "554:20:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 82,
+                  "initializationExpression": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 68,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftHandSide": {
+                        "argumentTypes": null,
+                        "id": 66,
+                        "name": "i",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 64,
+                        "src": "547:1:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "Assignment",
+                      "operator": "=",
+                      "rightHandSide": {
+                        "argumentTypes": null,
+                        "hexValue": "30",
+                        "id": 67,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "551:1:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      },
+                      "src": "547:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 69,
+                    "nodeType": "ExpressionStatement",
+                    "src": "547:5:1"
+                  },
+                  "loopExpression": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 74,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "++",
+                      "prefix": false,
+                      "src": "576:3:1",
+                      "subExpression": {
+                        "argumentTypes": null,
+                        "id": 73,
+                        "name": "i",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 64,
+                        "src": "576:1:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 75,
+                    "nodeType": "ExpressionStatement",
+                    "src": "576:3:1"
+                  },
+                  "nodeType": "ForStatement",
+                  "src": "542:86:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 85,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 83,
+                      "name": "transactionCount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 41,
+                      "src": "637:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 84,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "656:1:1",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "637:20:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 86,
+                  "nodeType": "ExpressionStatement",
+                  "src": "637:20:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 88,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initSmartContractState",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 61,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "503:2:1"
+            },
+            "returnParameters": {
+              "id": 62,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "513:0:1"
+            },
+            "scope": 188,
+            "src": "472:192:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 109,
+              "nodeType": "Block",
+              "src": "783:145:1",
+              "statements": [
+                {
+                  "assignments": [
+                    98
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 98,
+                      "name": "transaction",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 109,
+                      "src": "793:31:1",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Transaction_$46_storage_ptr",
+                        "typeString": "struct TimeSensitiveSmartContract.Transaction"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 97,
+                        "name": "Transaction",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 46,
+                        "src": "793:11:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Transaction_$46_storage_ptr",
+                          "typeString": "struct TimeSensitiveSmartContract.Transaction"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 102,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 99,
+                      "name": "transactions",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 50,
+                      "src": "827:12:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Transaction_$46_storage_$",
+                        "typeString": "mapping(uint256 => struct TimeSensitiveSmartContract.Transaction storage ref)"
+                      }
+                    },
+                    "id": 101,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 100,
+                      "name": "transactionId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 90,
+                      "src": "840:13:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "827:27:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Transaction_$46_storage",
+                      "typeString": "struct TimeSensitiveSmartContract.Transaction storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "793:61:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 103,
+                          "name": "transaction",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 98,
+                          "src": "872:11:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Transaction_$46_storage_ptr",
+                            "typeString": "struct TimeSensitiveSmartContract.Transaction storage pointer"
+                          }
+                        },
+                        "id": 104,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "accepted",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 43,
+                        "src": "872:20:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_int256",
+                          "typeString": "int256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 105,
+                          "name": "transaction",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 98,
+                          "src": "894:11:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Transaction_$46_storage_ptr",
+                            "typeString": "struct TimeSensitiveSmartContract.Transaction storage pointer"
+                          }
+                        },
+                        "id": 106,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "blockTimestamp",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 45,
+                        "src": "894:26:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "id": 107,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "871:50:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_int256_$_t_uint256_$",
+                      "typeString": "tuple(int256,uint256)"
+                    }
+                  },
+                  "functionReturnParameters": 96,
+                  "id": 108,
+                  "nodeType": "Return",
+                  "src": "864:57:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 110,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTransaction",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 91,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 90,
+                  "name": "transactionId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 110,
+                  "src": "694:21:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 89,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "694:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "693:23:1"
+            },
+            "returnParameters": {
+              "id": 96,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 93,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 110,
+                  "src": "762:6:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 92,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "762:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 95,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 110,
+                  "src": "770:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 94,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "770:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "761:17:1"
+            },
+            "scope": 188,
+            "src": "670:258:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 119,
+              "nodeType": "Block",
+              "src": "1000:56:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 117,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 115,
+                      "name": "constraintIntervalStartTime",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 36,
+                      "src": "1010:27:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 116,
+                      "name": "startTime",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 112,
+                      "src": "1040:9:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1010:39:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 118,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1010:39:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 120,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setConstraintIntervalStartTime",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 113,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 112,
+                  "name": "startTime",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 120,
+                  "src": "974:17:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 111,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "974:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "973:19:1"
+            },
+            "returnParameters": {
+              "id": 114,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1000:0:1"
+            },
+            "scope": 188,
+            "src": "934:122:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 134,
+              "nodeType": "Block",
+              "src": "1126:122:1",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 127,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 125,
+                      "name": "constraintIntervalDuration",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38,
+                      "src": "1140:26:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "!=",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 126,
+                      "name": "duration",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 122,
+                      "src": "1170:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1140:38:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 133,
+                  "nodeType": "IfStatement",
+                  "src": "1136:106:1",
+                  "trueBody": {
+                    "id": 132,
+                    "nodeType": "Block",
+                    "src": "1180:62:1",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 130,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "argumentTypes": null,
+                            "id": 128,
+                            "name": "constraintIntervalDuration",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 38,
+                            "src": "1194:26:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "argumentTypes": null,
+                            "id": 129,
+                            "name": "duration",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 122,
+                            "src": "1223:8:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "src": "1194:37:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 131,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1194:37:1"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 135,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setConstraintIntervalDuration",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 123,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 122,
+                  "name": "duration",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 135,
+                  "src": "1101:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 121,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1101:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1100:18:1"
+            },
+            "returnParameters": {
+              "id": 124,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1126:0:1"
+            },
+            "scope": 188,
+            "src": "1062:186:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 186,
+              "nodeType": "Block",
+              "src": "1312:470:1",
+              "statements": [
+                {
+                  "assignments": [
+                    141
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 141,
+                      "name": "transaction",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 186,
+                      "src": "1322:30:1",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Transaction_$46_memory_ptr",
+                        "typeString": "struct TimeSensitiveSmartContract.Transaction"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 140,
+                        "name": "Transaction",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 46,
+                        "src": "1322:11:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Transaction_$46_storage_ptr",
+                          "typeString": "struct TimeSensitiveSmartContract.Transaction"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 142,
+                  "initialValue": null,
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1322:30:1"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "id": 153,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 146,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 143,
+                          "name": "block",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 197,
+                          "src": "1379:5:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_block",
+                            "typeString": "block"
+                          }
+                        },
+                        "id": 144,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "timestamp",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1379:15:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": ">",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "id": 145,
+                        "name": "constraintIntervalStartTime",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 36,
+                        "src": "1397:27:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "src": "1379:45:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "&&",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 152,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 147,
+                          "name": "block",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 197,
+                          "src": "1440:5:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_block",
+                            "typeString": "block"
+                          }
+                        },
+                        "id": 148,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "timestamp",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1440:15:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "<=",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 151,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 149,
+                          "name": "constraintIntervalStartTime",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 36,
+                          "src": "1471:27:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "+",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 150,
+                          "name": "constraintIntervalDuration",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 38,
+                          "src": "1501:26:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "1471:56:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "src": "1440:87:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "1379:148:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": {
+                    "id": 168,
+                    "nodeType": "Block",
+                    "src": "1593:50:1",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 166,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 161,
+                              "name": "transaction",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 141,
+                              "src": "1607:11:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Transaction_$46_memory_ptr",
+                                "typeString": "struct TimeSensitiveSmartContract.Transaction memory"
+                              }
+                            },
+                            "id": 163,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": true,
+                            "memberName": "accepted",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 43,
+                            "src": "1607:20:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_int256",
+                              "typeString": "int256"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "argumentTypes": null,
+                            "id": 165,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "UnaryOperation",
+                            "operator": "-",
+                            "prefix": true,
+                            "src": "1630:2:1",
+                            "subExpression": {
+                              "argumentTypes": null,
+                              "hexValue": "31",
+                              "id": 164,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1631:1:1",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_1_by_1",
+                                "typeString": "int_const 1"
+                              },
+                              "value": "1"
+                            },
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_minus_1_by_1",
+                              "typeString": "int_const -1"
+                            }
+                          },
+                          "src": "1607:25:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_int256",
+                            "typeString": "int256"
+                          }
+                        },
+                        "id": 167,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1607:25:1"
+                      }
+                    ]
+                  },
+                  "id": 169,
+                  "nodeType": "IfStatement",
+                  "src": "1362:281:1",
+                  "trueBody": {
+                    "id": 160,
+                    "nodeType": "Block",
+                    "src": "1538:49:1",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 158,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 154,
+                              "name": "transaction",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 141,
+                              "src": "1552:11:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Transaction_$46_memory_ptr",
+                                "typeString": "struct TimeSensitiveSmartContract.Transaction memory"
+                              }
+                            },
+                            "id": 156,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": true,
+                            "memberName": "accepted",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 43,
+                            "src": "1552:20:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_int256",
+                              "typeString": "int256"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "argumentTypes": null,
+                            "hexValue": "31",
+                            "id": 157,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "1575:1:1",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_1_by_1",
+                              "typeString": "int_const 1"
+                            },
+                            "value": "1"
+                          },
+                          "src": "1552:24:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_int256",
+                            "typeString": "int256"
+                          }
+                        },
+                        "id": 159,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1552:24:1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 175,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 170,
+                        "name": "transaction",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 141,
+                        "src": "1652:11:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Transaction_$46_memory_ptr",
+                          "typeString": "struct TimeSensitiveSmartContract.Transaction memory"
+                        }
+                      },
+                      "id": 172,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "blockTimestamp",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 45,
+                      "src": "1652:26:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 173,
+                        "name": "block",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 197,
+                        "src": "1681:5:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_block",
+                          "typeString": "block"
+                        }
+                      },
+                      "id": 174,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "timestamp",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1681:15:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1652:44:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 176,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1652:44:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 181,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 177,
+                        "name": "transactions",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 50,
+                        "src": "1706:12:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Transaction_$46_storage_$",
+                          "typeString": "mapping(uint256 => struct TimeSensitiveSmartContract.Transaction storage ref)"
+                        }
+                      },
+                      "id": 179,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 178,
+                        "name": "transactionId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 137,
+                        "src": "1719:13:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1706:27:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Transaction_$46_storage",
+                        "typeString": "struct TimeSensitiveSmartContract.Transaction storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 180,
+                      "name": "transaction",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 141,
+                      "src": "1736:11:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Transaction_$46_memory_ptr",
+                        "typeString": "struct TimeSensitiveSmartContract.Transaction memory"
+                      }
+                    },
+                    "src": "1706:41:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Transaction_$46_storage",
+                      "typeString": "struct TimeSensitiveSmartContract.Transaction storage ref"
+                    }
+                  },
+                  "id": 182,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1706:41:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 184,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "1757:18:1",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "id": 183,
+                      "name": "transactionCount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 41,
+                      "src": "1757:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 185,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1757:18:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 187,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "constraintFunction",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 138,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 137,
+                  "name": "transactionId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 187,
+                  "src": "1282:21:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 136,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1282:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1281:23:1"
+            },
+            "returnParameters": {
+              "id": 139,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1312:0:1"
+            },
+            "scope": 188,
+            "src": "1254:528:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 189,
+        "src": "70:1714:1"
+      }
+    ],
+    "src": "36:1749:1"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/TimeSensitiveSmartContract.sol",
+      "exportedSymbols": {
+        "TimeSensitiveSmartContract": [
+          188
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".16",
+            "<",
+            "0.8",
+            ".0"
+          ]
+        },
+        "id": 34,
+        "name": "PragmaDirective",
+        "src": "36:32:1"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            188
+          ],
+          "name": "TimeSensitiveSmartContract",
+          "scope": 189
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "constraintIntervalStartTime",
+              "scope": 188,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint256",
+                  "type": "uint256"
+                },
+                "id": 35,
+                "name": "ElementaryTypeName",
+                "src": "112:7:1"
+              }
+            ],
+            "id": 36,
+            "name": "VariableDeclaration",
+            "src": "112:35:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "constraintIntervalDuration",
+              "scope": 188,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint256",
+                  "type": "uint256"
+                },
+                "id": 37,
+                "name": "ElementaryTypeName",
+                "src": "153:7:1"
+              }
+            ],
+            "id": 38,
+            "name": "VariableDeclaration",
+            "src": "153:41:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "transactionCount",
+              "scope": 188,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint256",
+                  "type": "uint256"
+                },
+                "id": 39,
+                "name": "ElementaryTypeName",
+                "src": "200:7:1"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "30",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 0",
+                  "value": "0"
+                },
+                "id": 40,
+                "name": "Literal",
+                "src": "227:1:1"
+              }
+            ],
+            "id": 41,
+            "name": "VariableDeclaration",
+            "src": "200:28:1"
+          },
+          {
+            "attributes": {
+              "canonicalName": "TimeSensitiveSmartContract.Transaction",
+              "name": "Transaction",
+              "scope": 188,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "accepted",
+                  "scope": 46,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "int256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "int256",
+                      "type": "int256"
+                    },
+                    "id": 42,
+                    "name": "ElementaryTypeName",
+                    "src": "264:6:1"
+                  }
+                ],
+                "id": 43,
+                "name": "VariableDeclaration",
+                "src": "264:15:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "blockTimestamp",
+                  "scope": 46,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 44,
+                    "name": "ElementaryTypeName",
+                    "src": "289:7:1"
+                  }
+                ],
+                "id": 45,
+                "name": "VariableDeclaration",
+                "src": "289:22:1"
+              }
+            ],
+            "id": 46,
+            "name": "StructDefinition",
+            "src": "235:83:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "transactions",
+              "scope": 188,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(uint256 => struct TimeSensitiveSmartContract.Transaction)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(uint256 => struct TimeSensitiveSmartContract.Transaction)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 47,
+                    "name": "ElementaryTypeName",
+                    "src": "332:7:1"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Transaction",
+                      "referencedDeclaration": 46,
+                      "type": "struct TimeSensitiveSmartContract.Transaction"
+                    },
+                    "id": 48,
+                    "name": "UserDefinedTypeName",
+                    "src": "343:11:1"
+                  }
+                ],
+                "id": 49,
+                "name": "Mapping",
+                "src": "324:31:1"
+              }
+            ],
+            "id": 50,
+            "name": "VariableDeclaration",
+            "src": "324:44:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "scope": 188,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "duration",
+                      "scope": 60,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 51,
+                        "name": "ElementaryTypeName",
+                        "src": "387:7:1"
+                      }
+                    ],
+                    "id": 52,
+                    "name": "VariableDeclaration",
+                    "src": "387:16:1"
+                  }
+                ],
+                "id": 53,
+                "name": "ParameterList",
+                "src": "386:18:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 54,
+                "name": "ParameterList",
+                "src": "412:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 38,
+                              "type": "uint256",
+                              "value": "constraintIntervalDuration"
+                            },
+                            "id": 55,
+                            "name": "Identifier",
+                            "src": "422:26:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 52,
+                              "type": "uint256",
+                              "value": "duration"
+                            },
+                            "id": 56,
+                            "name": "Identifier",
+                            "src": "451:8:1"
+                          }
+                        ],
+                        "id": 57,
+                        "name": "Assignment",
+                        "src": "422:37:1"
+                      }
+                    ],
+                    "id": 58,
+                    "name": "ExpressionStatement",
+                    "src": "422:37:1"
+                  }
+                ],
+                "id": 59,
+                "name": "Block",
+                "src": "412:54:1"
+              }
+            ],
+            "id": 60,
+            "name": "FunctionDefinition",
+            "src": "375:91:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "initSmartContractState",
+              "scope": 188,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 61,
+                "name": "ParameterList",
+                "src": "503:2:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 62,
+                "name": "ParameterList",
+                "src": "513:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        64
+                      ],
+                      "initialValue": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "i",
+                          "scope": 87,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "uint256",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint256",
+                              "type": "uint256"
+                            },
+                            "id": 63,
+                            "name": "ElementaryTypeName",
+                            "src": "523:7:1"
+                          }
+                        ],
+                        "id": 64,
+                        "name": "VariableDeclaration",
+                        "src": "523:9:1"
+                      }
+                    ],
+                    "id": 65,
+                    "name": "VariableDeclarationStatement",
+                    "src": "523:9:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "=",
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 64,
+                                  "type": "uint256",
+                                  "value": "i"
+                                },
+                                "id": 66,
+                                "name": "Identifier",
+                                "src": "547:1:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "30",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "number",
+                                  "type": "int_const 0",
+                                  "value": "0"
+                                },
+                                "id": 67,
+                                "name": "Literal",
+                                "src": "551:1:1"
+                              }
+                            ],
+                            "id": 68,
+                            "name": "Assignment",
+                            "src": "547:5:1"
+                          }
+                        ],
+                        "id": 69,
+                        "name": "ExpressionStatement",
+                        "src": "547:5:1"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "<",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 64,
+                              "type": "uint256",
+                              "value": "i"
+                            },
+                            "id": 70,
+                            "name": "Identifier",
+                            "src": "554:1:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 41,
+                              "type": "uint256",
+                              "value": "transactionCount"
+                            },
+                            "id": 71,
+                            "name": "Identifier",
+                            "src": "558:16:1"
+                          }
+                        ],
+                        "id": 72,
+                        "name": "BinaryOperation",
+                        "src": "554:20:1"
+                      },
+                      {
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "++",
+                              "prefix": false,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 64,
+                                  "type": "uint256",
+                                  "value": "i"
+                                },
+                                "id": 73,
+                                "name": "Identifier",
+                                "src": "576:1:1"
+                              }
+                            ],
+                            "id": 74,
+                            "name": "UnaryOperation",
+                            "src": "576:3:1"
+                          }
+                        ],
+                        "id": 75,
+                        "name": "ExpressionStatement",
+                        "src": "576:3:1"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "delete",
+                                  "prefix": true,
+                                  "type": "tuple()"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "type": "struct TimeSensitiveSmartContract.Transaction storage ref"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 50,
+                                          "type": "mapping(uint256 => struct TimeSensitiveSmartContract.Transaction storage ref)",
+                                          "value": "transactions"
+                                        },
+                                        "id": 76,
+                                        "name": "Identifier",
+                                        "src": "602:12:1"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 64,
+                                          "type": "uint256",
+                                          "value": "i"
+                                        },
+                                        "id": 77,
+                                        "name": "Identifier",
+                                        "src": "615:1:1"
+                                      }
+                                    ],
+                                    "id": 78,
+                                    "name": "IndexAccess",
+                                    "src": "602:15:1"
+                                  }
+                                ],
+                                "id": 79,
+                                "name": "UnaryOperation",
+                                "src": "595:22:1"
+                              }
+                            ],
+                            "id": 80,
+                            "name": "ExpressionStatement",
+                            "src": "595:22:1"
+                          }
+                        ],
+                        "id": 81,
+                        "name": "Block",
+                        "src": "581:47:1"
+                      }
+                    ],
+                    "id": 82,
+                    "name": "ForStatement",
+                    "src": "542:86:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 41,
+                              "type": "uint256",
+                              "value": "transactionCount"
+                            },
+                            "id": 83,
+                            "name": "Identifier",
+                            "src": "637:16:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "30",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 0",
+                              "value": "0"
+                            },
+                            "id": 84,
+                            "name": "Literal",
+                            "src": "656:1:1"
+                          }
+                        ],
+                        "id": 85,
+                        "name": "Assignment",
+                        "src": "637:20:1"
+                      }
+                    ],
+                    "id": 86,
+                    "name": "ExpressionStatement",
+                    "src": "637:20:1"
+                  }
+                ],
+                "id": 87,
+                "name": "Block",
+                "src": "513:151:1"
+              }
+            ],
+            "id": 88,
+            "name": "FunctionDefinition",
+            "src": "472:192:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getTransaction",
+              "scope": 188,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "transactionId",
+                      "scope": 110,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 89,
+                        "name": "ElementaryTypeName",
+                        "src": "694:7:1"
+                      }
+                    ],
+                    "id": 90,
+                    "name": "VariableDeclaration",
+                    "src": "694:21:1"
+                  }
+                ],
+                "id": 91,
+                "name": "ParameterList",
+                "src": "693:23:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 110,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int256",
+                          "type": "int256"
+                        },
+                        "id": 92,
+                        "name": "ElementaryTypeName",
+                        "src": "762:6:1"
+                      }
+                    ],
+                    "id": 93,
+                    "name": "VariableDeclaration",
+                    "src": "762:6:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 110,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 94,
+                        "name": "ElementaryTypeName",
+                        "src": "770:7:1"
+                      }
+                    ],
+                    "id": 95,
+                    "name": "VariableDeclaration",
+                    "src": "770:7:1"
+                  }
+                ],
+                "id": 96,
+                "name": "ParameterList",
+                "src": "761:17:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        98
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "transaction",
+                          "scope": 109,
+                          "stateVariable": false,
+                          "storageLocation": "storage",
+                          "type": "struct TimeSensitiveSmartContract.Transaction",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "Transaction",
+                              "referencedDeclaration": 46,
+                              "type": "struct TimeSensitiveSmartContract.Transaction"
+                            },
+                            "id": 97,
+                            "name": "UserDefinedTypeName",
+                            "src": "793:11:1"
+                          }
+                        ],
+                        "id": 98,
+                        "name": "VariableDeclaration",
+                        "src": "793:31:1"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "struct TimeSensitiveSmartContract.Transaction storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 50,
+                              "type": "mapping(uint256 => struct TimeSensitiveSmartContract.Transaction storage ref)",
+                              "value": "transactions"
+                            },
+                            "id": 99,
+                            "name": "Identifier",
+                            "src": "827:12:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 90,
+                              "type": "uint256",
+                              "value": "transactionId"
+                            },
+                            "id": 100,
+                            "name": "Identifier",
+                            "src": "840:13:1"
+                          }
+                        ],
+                        "id": 101,
+                        "name": "IndexAccess",
+                        "src": "827:27:1"
+                      }
+                    ],
+                    "id": 102,
+                    "name": "VariableDeclarationStatement",
+                    "src": "793:61:1"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 96
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "tuple(int256,uint256)"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "accepted",
+                              "referencedDeclaration": 43,
+                              "type": "int256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 98,
+                                  "type": "struct TimeSensitiveSmartContract.Transaction storage pointer",
+                                  "value": "transaction"
+                                },
+                                "id": 103,
+                                "name": "Identifier",
+                                "src": "872:11:1"
+                              }
+                            ],
+                            "id": 104,
+                            "name": "MemberAccess",
+                            "src": "872:20:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "blockTimestamp",
+                              "referencedDeclaration": 45,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 98,
+                                  "type": "struct TimeSensitiveSmartContract.Transaction storage pointer",
+                                  "value": "transaction"
+                                },
+                                "id": 105,
+                                "name": "Identifier",
+                                "src": "894:11:1"
+                              }
+                            ],
+                            "id": 106,
+                            "name": "MemberAccess",
+                            "src": "894:26:1"
+                          }
+                        ],
+                        "id": 107,
+                        "name": "TupleExpression",
+                        "src": "871:50:1"
+                      }
+                    ],
+                    "id": 108,
+                    "name": "Return",
+                    "src": "864:57:1"
+                  }
+                ],
+                "id": 109,
+                "name": "Block",
+                "src": "783:145:1"
+              }
+            ],
+            "id": 110,
+            "name": "FunctionDefinition",
+            "src": "670:258:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "setConstraintIntervalStartTime",
+              "scope": 188,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "startTime",
+                      "scope": 120,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 111,
+                        "name": "ElementaryTypeName",
+                        "src": "974:7:1"
+                      }
+                    ],
+                    "id": 112,
+                    "name": "VariableDeclaration",
+                    "src": "974:17:1"
+                  }
+                ],
+                "id": 113,
+                "name": "ParameterList",
+                "src": "973:19:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 114,
+                "name": "ParameterList",
+                "src": "1000:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 36,
+                              "type": "uint256",
+                              "value": "constraintIntervalStartTime"
+                            },
+                            "id": 115,
+                            "name": "Identifier",
+                            "src": "1010:27:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 112,
+                              "type": "uint256",
+                              "value": "startTime"
+                            },
+                            "id": 116,
+                            "name": "Identifier",
+                            "src": "1040:9:1"
+                          }
+                        ],
+                        "id": 117,
+                        "name": "Assignment",
+                        "src": "1010:39:1"
+                      }
+                    ],
+                    "id": 118,
+                    "name": "ExpressionStatement",
+                    "src": "1010:39:1"
+                  }
+                ],
+                "id": 119,
+                "name": "Block",
+                "src": "1000:56:1"
+              }
+            ],
+            "id": 120,
+            "name": "FunctionDefinition",
+            "src": "934:122:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "setConstraintIntervalDuration",
+              "scope": 188,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "duration",
+                      "scope": 135,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 121,
+                        "name": "ElementaryTypeName",
+                        "src": "1101:7:1"
+                      }
+                    ],
+                    "id": 122,
+                    "name": "VariableDeclaration",
+                    "src": "1101:16:1"
+                  }
+                ],
+                "id": 123,
+                "name": "ParameterList",
+                "src": "1100:18:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 124,
+                "name": "ParameterList",
+                "src": "1126:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "falseBody": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "!=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 38,
+                              "type": "uint256",
+                              "value": "constraintIntervalDuration"
+                            },
+                            "id": 125,
+                            "name": "Identifier",
+                            "src": "1140:26:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 122,
+                              "type": "uint256",
+                              "value": "duration"
+                            },
+                            "id": 126,
+                            "name": "Identifier",
+                            "src": "1170:8:1"
+                          }
+                        ],
+                        "id": 127,
+                        "name": "BinaryOperation",
+                        "src": "1140:38:1"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "=",
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 38,
+                                      "type": "uint256",
+                                      "value": "constraintIntervalDuration"
+                                    },
+                                    "id": 128,
+                                    "name": "Identifier",
+                                    "src": "1194:26:1"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 122,
+                                      "type": "uint256",
+                                      "value": "duration"
+                                    },
+                                    "id": 129,
+                                    "name": "Identifier",
+                                    "src": "1223:8:1"
+                                  }
+                                ],
+                                "id": 130,
+                                "name": "Assignment",
+                                "src": "1194:37:1"
+                              }
+                            ],
+                            "id": 131,
+                            "name": "ExpressionStatement",
+                            "src": "1194:37:1"
+                          }
+                        ],
+                        "id": 132,
+                        "name": "Block",
+                        "src": "1180:62:1"
+                      }
+                    ],
+                    "id": 133,
+                    "name": "IfStatement",
+                    "src": "1136:106:1"
+                  }
+                ],
+                "id": 134,
+                "name": "Block",
+                "src": "1126:122:1"
+              }
+            ],
+            "id": 135,
+            "name": "FunctionDefinition",
+            "src": "1062:186:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "constraintFunction",
+              "scope": 188,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "transactionId",
+                      "scope": 187,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 136,
+                        "name": "ElementaryTypeName",
+                        "src": "1282:7:1"
+                      }
+                    ],
+                    "id": 137,
+                    "name": "VariableDeclaration",
+                    "src": "1282:21:1"
+                  }
+                ],
+                "id": 138,
+                "name": "ParameterList",
+                "src": "1281:23:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 139,
+                "name": "ParameterList",
+                "src": "1312:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        141
+                      ],
+                      "initialValue": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "transaction",
+                          "scope": 186,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "struct TimeSensitiveSmartContract.Transaction",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "Transaction",
+                              "referencedDeclaration": 46,
+                              "type": "struct TimeSensitiveSmartContract.Transaction"
+                            },
+                            "id": 140,
+                            "name": "UserDefinedTypeName",
+                            "src": "1322:11:1"
+                          }
+                        ],
+                        "id": 141,
+                        "name": "VariableDeclaration",
+                        "src": "1322:30:1"
+                      }
+                    ],
+                    "id": 142,
+                    "name": "VariableDeclarationStatement",
+                    "src": "1322:30:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "&&",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": ">",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "timestamp",
+                                  "referencedDeclaration": null,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 197,
+                                      "type": "block",
+                                      "value": "block"
+                                    },
+                                    "id": 143,
+                                    "name": "Identifier",
+                                    "src": "1379:5:1"
+                                  }
+                                ],
+                                "id": 144,
+                                "name": "MemberAccess",
+                                "src": "1379:15:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 36,
+                                  "type": "uint256",
+                                  "value": "constraintIntervalStartTime"
+                                },
+                                "id": 145,
+                                "name": "Identifier",
+                                "src": "1397:27:1"
+                              }
+                            ],
+                            "id": 146,
+                            "name": "BinaryOperation",
+                            "src": "1379:45:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "<=",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "timestamp",
+                                  "referencedDeclaration": null,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 197,
+                                      "type": "block",
+                                      "value": "block"
+                                    },
+                                    "id": 147,
+                                    "name": "Identifier",
+                                    "src": "1440:5:1"
+                                  }
+                                ],
+                                "id": 148,
+                                "name": "MemberAccess",
+                                "src": "1440:15:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "commonType": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  },
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "+",
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 36,
+                                      "type": "uint256",
+                                      "value": "constraintIntervalStartTime"
+                                    },
+                                    "id": 149,
+                                    "name": "Identifier",
+                                    "src": "1471:27:1"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 38,
+                                      "type": "uint256",
+                                      "value": "constraintIntervalDuration"
+                                    },
+                                    "id": 150,
+                                    "name": "Identifier",
+                                    "src": "1501:26:1"
+                                  }
+                                ],
+                                "id": 151,
+                                "name": "BinaryOperation",
+                                "src": "1471:56:1"
+                              }
+                            ],
+                            "id": 152,
+                            "name": "BinaryOperation",
+                            "src": "1440:87:1"
+                          }
+                        ],
+                        "id": 153,
+                        "name": "BinaryOperation",
+                        "src": "1379:148:1"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "=",
+                                  "type": "int256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "member_name": "accepted",
+                                      "referencedDeclaration": 43,
+                                      "type": "int256"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 141,
+                                          "type": "struct TimeSensitiveSmartContract.Transaction memory",
+                                          "value": "transaction"
+                                        },
+                                        "id": 154,
+                                        "name": "Identifier",
+                                        "src": "1552:11:1"
+                                      }
+                                    ],
+                                    "id": 156,
+                                    "name": "MemberAccess",
+                                    "src": "1552:20:1"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "hexvalue": "31",
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "subdenomination": null,
+                                      "token": "number",
+                                      "type": "int_const 1",
+                                      "value": "1"
+                                    },
+                                    "id": 157,
+                                    "name": "Literal",
+                                    "src": "1575:1:1"
+                                  }
+                                ],
+                                "id": 158,
+                                "name": "Assignment",
+                                "src": "1552:24:1"
+                              }
+                            ],
+                            "id": 159,
+                            "name": "ExpressionStatement",
+                            "src": "1552:24:1"
+                          }
+                        ],
+                        "id": 160,
+                        "name": "Block",
+                        "src": "1538:49:1"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "=",
+                                  "type": "int256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "member_name": "accepted",
+                                      "referencedDeclaration": 43,
+                                      "type": "int256"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 141,
+                                          "type": "struct TimeSensitiveSmartContract.Transaction memory",
+                                          "value": "transaction"
+                                        },
+                                        "id": 161,
+                                        "name": "Identifier",
+                                        "src": "1607:11:1"
+                                      }
+                                    ],
+                                    "id": 163,
+                                    "name": "MemberAccess",
+                                    "src": "1607:20:1"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "operator": "-",
+                                      "prefix": true,
+                                      "type": "int_const -1"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "hexvalue": "31",
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": true,
+                                          "lValueRequested": false,
+                                          "subdenomination": null,
+                                          "token": "number",
+                                          "type": "int_const 1",
+                                          "value": "1"
+                                        },
+                                        "id": 164,
+                                        "name": "Literal",
+                                        "src": "1631:1:1"
+                                      }
+                                    ],
+                                    "id": 165,
+                                    "name": "UnaryOperation",
+                                    "src": "1630:2:1"
+                                  }
+                                ],
+                                "id": 166,
+                                "name": "Assignment",
+                                "src": "1607:25:1"
+                              }
+                            ],
+                            "id": 167,
+                            "name": "ExpressionStatement",
+                            "src": "1607:25:1"
+                          }
+                        ],
+                        "id": 168,
+                        "name": "Block",
+                        "src": "1593:50:1"
+                      }
+                    ],
+                    "id": 169,
+                    "name": "IfStatement",
+                    "src": "1362:281:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "blockTimestamp",
+                              "referencedDeclaration": 45,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 141,
+                                  "type": "struct TimeSensitiveSmartContract.Transaction memory",
+                                  "value": "transaction"
+                                },
+                                "id": 170,
+                                "name": "Identifier",
+                                "src": "1652:11:1"
+                              }
+                            ],
+                            "id": 172,
+                            "name": "MemberAccess",
+                            "src": "1652:26:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "timestamp",
+                              "referencedDeclaration": null,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 197,
+                                  "type": "block",
+                                  "value": "block"
+                                },
+                                "id": 173,
+                                "name": "Identifier",
+                                "src": "1681:5:1"
+                              }
+                            ],
+                            "id": 174,
+                            "name": "MemberAccess",
+                            "src": "1681:15:1"
+                          }
+                        ],
+                        "id": 175,
+                        "name": "Assignment",
+                        "src": "1652:44:1"
+                      }
+                    ],
+                    "id": 176,
+                    "name": "ExpressionStatement",
+                    "src": "1652:44:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "struct TimeSensitiveSmartContract.Transaction storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "struct TimeSensitiveSmartContract.Transaction storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 50,
+                                  "type": "mapping(uint256 => struct TimeSensitiveSmartContract.Transaction storage ref)",
+                                  "value": "transactions"
+                                },
+                                "id": 177,
+                                "name": "Identifier",
+                                "src": "1706:12:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 137,
+                                  "type": "uint256",
+                                  "value": "transactionId"
+                                },
+                                "id": 178,
+                                "name": "Identifier",
+                                "src": "1719:13:1"
+                              }
+                            ],
+                            "id": 179,
+                            "name": "IndexAccess",
+                            "src": "1706:27:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 141,
+                              "type": "struct TimeSensitiveSmartContract.Transaction memory",
+                              "value": "transaction"
+                            },
+                            "id": 180,
+                            "name": "Identifier",
+                            "src": "1736:11:1"
+                          }
+                        ],
+                        "id": 181,
+                        "name": "Assignment",
+                        "src": "1706:41:1"
+                      }
+                    ],
+                    "id": 182,
+                    "name": "ExpressionStatement",
+                    "src": "1706:41:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "++",
+                          "prefix": false,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 41,
+                              "type": "uint256",
+                              "value": "transactionCount"
+                            },
+                            "id": 183,
+                            "name": "Identifier",
+                            "src": "1757:16:1"
+                          }
+                        ],
+                        "id": 184,
+                        "name": "UnaryOperation",
+                        "src": "1757:18:1"
+                      }
+                    ],
+                    "id": 185,
+                    "name": "ExpressionStatement",
+                    "src": "1757:18:1"
+                  }
+                ],
+                "id": 186,
+                "name": "Block",
+                "src": "1312:470:1"
+              }
+            ],
+            "id": 187,
+            "name": "FunctionDefinition",
+            "src": "1254:528:1"
+          }
+        ],
+        "id": 188,
+        "name": "ContractDefinition",
+        "src": "70:1714:1"
+      }
+    ],
+    "id": 189,
+    "name": "SourceUnit",
+    "src": "36:1749:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "10": {
+      "events": {},
+      "links": {},
+      "address": "0x3630325a8A6ba52b5461D7bae358f2A422cD85F0",
+      "transactionHash": "0x5610dd7d075c16dc79340ecccbcbb54f422d75b184dd3d10a04cd0976433af3a"
+    }
+  },
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-07-05T17:47:23.501Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

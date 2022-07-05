@@ -1,0 +1,99 @@
+{
+    "contractName": "TimeSensitiveSmartContract",
+    "abi": [
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "duration",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "constructor"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "transactionId",
+					"type": "uint256"
+				}
+			],
+			"name": "constraintFunction",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "constraintIntervalDuration",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "transactionId",
+					"type": "uint256"
+				}
+			],
+			"name": "getTransaction",
+			"outputs": [
+				{
+					"internalType": "int256",
+					"name": "",
+					"type": "int256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "initSmartContractState",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "duration",
+					"type": "uint256"
+				}
+			],
+			"name": "setConstraintIntervalDuration",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "startTime",
+					"type": "uint256"
+				}
+			],
+			"name": "setConstraintIntervalStartTime",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		}
+	]
+}
