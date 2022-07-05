@@ -8,9 +8,6 @@ and provides the code needed to reproduce the result described in the paper.
 
 Upon the setup, a time-sensitive smart contract is deployed on a locally running blockchain or on one of the Ethereum test networks, depending on the users input. The experiment script sends multiple transactions to the blockchain to request the computation of a temporal constrained function defined in the smart contract. The generated output file contains the result of one experiment execeution. A Jupyter Notebook is used to read the output files and visualize the result. 
 
-![sequence](images/sequence.gif)
-_Figure 1. Sequence diagram visualising the flow of the experiment._
-
 ## 1. Prerequesties
 
 1. Clone the repository
@@ -68,9 +65,6 @@ The script generates an output file that contains the data from one execution. T
 In root directory double click on Evaluation.ipynb.
 Juypter notebook should open automatically.
 Change the configuration in the second block of the jupyter notebook to select the blockchain configuration you want to create plots for.
-
-![Jupyter](images/notebook.png)
-_Figure 4. Lines that have to be configured in the Jupyter notebook in order to select the blockchain configurations to be processed_
 
 Note: The Jupyter notebook was tested with the following blockchain configuration. Some functions may not work properly if different configurations are used.
 
