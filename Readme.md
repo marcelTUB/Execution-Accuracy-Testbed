@@ -1,12 +1,12 @@
 # Intro
 
-This project is part of the bachleor thesis
+This project is the implementation part of the short paper
 
-<b> On the Accuracy of Block-Timestamp-based Time-sensitive
-Smart Contracts on Private Permissioned Ethereum Blockchains </b>
+<b> Can We Effectively Use Smart Contracts to Stipulate Time Constraints?</b>
 
-and provides the code needed to reproduce the result described in the thesis.
-The exeriment setup consist of a blockchain on which we deploy a time-sensitive Smart Contract and a script that sends transactions to the blockchain to request the computation of the temporal constrained function defined in the Smart Contract. Output files are generated during the experiment, each file containing the result of one execeution. A Jupyter Notebook is used to read the output files and visualize the result. The plots are used in the Evaluation Chapter. A more detailed sequence of the experiment is sown in Figure (1).
+and provides the code needed to reproduce the result described in the paper.
+
+Upon the setup, a time-sensitive smart contract is deployed on a locally running blockchain or on one of the Ethereum test networks, depending on the users input. The experiment script sends multiple transactions to the blockchain to request the computation of a temporal constrained function defined in the smart contract. The generated output file contains the result of one experiment execeution. A Jupyter Notebook is used to read the output files and visualize the result. 
 
 ![sequence](images/sequence.gif)
 _Figure 1. Sequence diagram visualising the flow of the experiment._
@@ -31,18 +31,20 @@ cd BachelorThesisCode
 git checkout master
 ```
 
+4. install the packages
+
+```
+npm install
+```
+
 List of dependencies
 
-node, tested with version v12.7.0
-npm, tested with version 7.19.1
-Docker, tested with version 1.29.2, build 5becea4c
-Docker-Compose, tested with 20.10.8, build 3967b7d
+- node, tested with version v16.13.0
+- npm, tested with version 7.19.1
+- Docker, tested with version 1.29.2, build 5becea4c
+- Docker-Compose, tested with 20.10.8, build 3967b7d
 
-You can automatically install the required programs using the installation script. If you have any problems, follow the official documentation from the developer.
 
-```
-./install.sh
-```
 
 ## 2. Setup
 
@@ -51,34 +53,13 @@ You can automatically install the required programs using the installation scrip
 ```
 ./setup.sh
 ```
+Follow the instructions prompted in the console.
 
-The script uses npm to install further nodejs packages.
-
-2. Follow the Instructions
-
-Answer the questions prompted in the console.
-
-
-It generates a .env file in the root directory.
-
-### 3. Configure Experiment-Start-Block-Offset in .env file
-
-Open the .env file in the root directory.
-
-```JS
-EXPERIMENT_START_BLOCK_OFFSET=
-```
-
-## 3. Start Experiment
-
-In project root directory run:
+A .env file is generated in the root directory.
 
 ```
 npm start
 ```
-
-![Experiment](images/experiment.png)
-_Figure 3. Logs from experiment after running npm start_
 
 The script generates an output file that contains the data from one execution. The file is saved in /generatedData. The filename is the UTC in seconds. The experiment will restart automatically. If you want to end the experiment you have to do it manually (CTRL+C).
 
@@ -98,23 +79,3 @@ Schema {blocktime: [ recommitIntervals ]}
 ```py
 configuration={6: [1,2,3,4,5,15], 7: [3], 5: [3]}
 ```
-
-## 5. CleanUp
-
-Run the cleanup script to remove the .env file and to stop the blockchain.
-
-```
-./cleanup
-```
-
-## 6. Extras
-
-We can obtain the block gas limit by running the following command.
-
-```
-npm run logBlockGasLimit
-```
-
-Use the following Equation to verifiy that the block gas limit does not influence the result.
-
-gasLimit ( B<sub>i</sub> ) ≥ b · (#T/s) · gas<sub>T <sub>i</sub></sub>
