@@ -73,3 +73,16 @@ Schema {blocktime: [ recommitIntervals ]}
 ```py
 configuration={6: [1,2,3,4,5,15], 7: [3], 5: [3]}
 ```
+## 5. Other
+
+Please cite the following paper if you use our code:
+
+@inproceedings{10.1109/DAPPS55202.2022.00010,
+  author = {Eichinger, Tobias and Ebermann, Marcel},
+  title = {Can We Effectively Use Smart Contracts to Stipulate Time Constraints?},
+  year = {2022},
+  booktitle = {2022 IEEE International Conference on Decentralized Applications and Infrastructures},
+  series = {DAPPS'22},
+  pages = {11-18},
+  doi = {10.1109/DAPPS55202.2022.00010},
+}
